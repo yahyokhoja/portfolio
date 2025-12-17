@@ -3,6 +3,7 @@ import Projects from "./components/Projects";
 import { useTranslation } from "react-i18next";
 import AboutMe from "./components/AboutMe";
 import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -19,10 +20,10 @@ function App() {
       <AboutMe />
       <Projects />
       <ContactForm />
-
+      <Footer/>
 
       </div>
-
+      
    
     </>
   );
