@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
+
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 const items = [
   { title: "Delivery App", desc: "Django + React + PostgreSQL" },
   { title: "E-commerce", desc: "Stripe, Admin panel, carts" },
   { title: "Telegram Bots", desc: "Proxy + Bybit integration" },
+  
 ];
 
 const Projects = () => {

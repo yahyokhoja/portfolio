@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import AboutMe from "./components/AboutMe";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
-
+import StartupList from "./components/StartupList";
 
 function App() {
   const { t } = useTranslation();
@@ -19,6 +19,7 @@ function App() {
 
       <AboutMe />
       <Projects />
+       <StartupList />
       <ContactForm />
       <Footer/>
 
