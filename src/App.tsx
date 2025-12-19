@@ -6,6 +6,7 @@ import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import StartupList from "./components/StartupList";
 
+
 function App() {
   const { t } = useTranslation();
 
@@ -14,7 +15,7 @@ function App() {
       <AppNavbar />
       <div className="container mt-5" id="about">
         <h1>{t("about")}</h1>
-        <p>Краткая информация обо мне.</p>
+      
 
 
       <AboutMe />

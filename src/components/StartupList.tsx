@@ -1,5 +1,5 @@
-
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useTranslation } from "react-i18next";
 
 interface StartupItem {
   title: string;
@@ -8,33 +8,35 @@ interface StartupItem {
   image: string;
 }
 
-const startups: StartupItem[] = [
-  {
-    title: "Food Delivery App",
-    description: "MVP for local restaurants with payments, orders and delivery.",
-    link: "https://example.com",
-    image: "/startup1.png",
-  },
-  {
-    title: "Crypto Trading Panel",
-    description: "Trading interface using Bybit API with orders, charts, signals.",
-    link: "https://example.com",
-    image: "/startup2.png",
-  },
-  {
-    title: "Online Education Platform",
-    description: "Video lessons, student dashboard, quizzes, homework system.",
-    link: "https://example.com",
-    image: "/startup3.png",
-  },
-];
-
 export default function StartupList() {
+  const { t } = useTranslation();
+
+  const startups: StartupItem[] = [
+    {
+      title: t("startup_items.food_title"),
+      description: t("startup_items.food_desc"),
+      link: "https://example.com",
+      image: "/startup1.png",
+    },
+    {
+      title: t("startup_items.crypto_title"),
+      description: t("startup_items.crypto_desc"),
+      link: "https://example.com",
+      image: "/startup2.png",
+    },
+    {
+      title: t("startup_items.edu_title"),
+      description: t("startup_items.edu_desc"),
+      link: "https://example.com",
+      image: "/startup3.png",
+    },
+  ];
+
   return (
     <section className="py-5 bg-light" id="startups">
       <div className="container py-5">
         <h2 className="text-center display-5 fw-bold mb-5">
-          🚀 My Startups
+          {t("startups_title")}
         </h2>
 
         <div className="row g-4">
@@ -55,7 +57,7 @@ export default function StartupList() {
                     target="_blank"
                     className="btn btn-primary w-100"
                   >
-                    View Project
+                    {t("view_project")}
                   </a>
                 </div>
               </div>

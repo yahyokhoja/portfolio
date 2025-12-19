@@ -2,8 +2,10 @@ import { useRef, useState } from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import { sendForm } from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
@@ -13,10 +15,10 @@ const ContactForm = () => {
 
     try {
       await sendForm(
-        "service_x5pvn3p", // Service ID
-        "template_pq0o3ze",       // Template ID
+        "service_x5pvn3p",
+        "template_pq0o3ze",
         form.current,
-        "fnokvXQm-SIvAKx55" // Public Key
+        "fnokvXQm-SIvAKx55"
       );
       setStatus("success");
       form.current.reset();
@@ -34,11 +36,15 @@ const ContactForm = () => {
         transition={{ duration: 0.5 }}
         className="mb-4"
       >
-        Contact Me
+        {t("contact_title")}
       </motion.h2>
 
-      {status === "success" && <Alert variant="success">Message sent successfully!</Alert>}
-      {status === "error" && <Alert variant="danger">Failed to send message. Check your IDs.</Alert>}
+      {status === "success" && (
+        <Alert variant="success">{t("contact_success")}</Alert>
+      )}
+      {status === "error" && (
+        <Alert variant="danger">{t("contact_error")}</Alert>
+      )}
 
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
@@ -47,26 +53,49 @@ const ContactForm = () => {
       >
         <Form ref={form} onSubmit={sendEmail}>
           <Form.Group className="mb-3">
-            <Form.Label>Name</Form.Label>
-            <Form.Control type="text" name="name" placeholder="Your Name" required />
+            <Form.Label>{t("contact_name")}</Form.Label>
+            <Form.Control
+              type="text"
+              name="name"
+              placeholder={t("contact_name_ph") as string}
+              required
+            />
           </Form.Group>
 
           <Form.Group className="mb-3">
-            <Form.Label>Email</Form.Label>
-            <Form.Control type="email" name="email" placeholder="Your Email" required />
+            <Form.Label>{t("contact_email")}</Form.Label>
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder={t("contact_email_ph") as string}
+              required
+            />
           </Form.Group>
 
           <Form.Group className="mb-3">
-            <Form.Label>Subject</Form.Label>
-            <Form.Control type="text" name="title" placeholder="Subject" required />
+            <Form.Label>{t("contact_subject")}</Form.Label>
+            <Form.Control
+              type="text"
+              name="title"
+              placeholder={t("contact_subject_ph") as string}
+              required
+            />
           </Form.Group>
 
           <Form.Group className="mb-3">
-            <Form.Label>Message</Form.Label>
-            <Form.Control as="textarea" rows={5} name="message" placeholder="Your Message" required />
+            <Form.Label>{t("contact_message")}</Form.Label>
+            <Form.Control
+              as="textarea"
+              rows={5}
+              name="message"
+              placeholder={t("contact_message_ph") as string}
+              required
+            />
           </Form.Group>
 
-          <Button type="submit" variant="primary" className="w-100">Send Message</Button>
+          <Button type="submit" variant="primary" className="w-100">
+            {t("contact_send")}
+          </Button>
         </Form>
       </motion.div>
     </Container>
