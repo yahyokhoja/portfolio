@@ -1,5 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 interface StartupItem {
   title: string;
@@ -15,21 +17,31 @@ export default function StartupList() {
     {
       title: t("startup_items.food_title"),
       description: t("startup_items.food_desc"),
-      link: "https://example.com",
-      image: "/startup1.png",
+      link: "/startups/food-delivery",
+      image: "src/assets/food.jpg",
     },
     {
       title: t("startup_items.crypto_title"),
       description: t("startup_items.crypto_desc"),
-      link: "https://example.com",
-      image: "/startup2.png",
+      link: "/startups/crypto-panel",
+      image: "src/assets/crypto.jpg",
     },
     {
       title: t("startup_items.edu_title"),
       description: t("startup_items.edu_desc"),
-      link: "https://example.com",
-      image: "/startup3.png",
+      link: "/startups/education-platform",
+      image: "src/assets/edu.jpg",
     },
+
+{
+  title: t("startup_items.uav_title"),
+  description: t("startup_items.uav_desc"),
+  link: "/startups/uav-factory", // корректный роут без #home
+  image: "src/assets/uav.jpg",
+}
+
+
+    
   ];
 
   return (
@@ -52,13 +64,12 @@ export default function StartupList() {
                 <div className="card-body">
                   <h5 className="card-title fw-bold">{s.title}</h5>
                   <p className="card-text">{s.description}</p>
-                  <a
-                    href={s.link}
-                    target="_blank"
+                  <Link
+                    to={s.link}
                     className="btn btn-primary w-100"
                   >
                     {t("view_project")}
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
