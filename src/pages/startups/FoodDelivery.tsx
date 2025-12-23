@@ -1,5 +1,8 @@
+
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+
 
 const FoodDelivery: React.FC = () => {
   const { t } = useTranslation();
@@ -41,7 +44,11 @@ const FoodDelivery: React.FC = () => {
         <li>{t("project.food_deadlines.launch") || "Запуск приложения: Q3 2025"}</li>
         <li>{t("project.food_deadlines.expansion") || "Расширение сервиса: Q1 2026"}</li>
       </ul>
+
     </div>
+
+   
+       
   );
 };
 

@@ -23,7 +23,7 @@ export default function StartupList() {
     {
       title: t("startup_items.crypto_title"),
       description: t("startup_items.crypto_desc"),
-      link: "/startups/crypto-panel",
+      link: "/startups/crypto/crypto-panel",
       image: "src/assets/crypto.jpg",
     },
     {

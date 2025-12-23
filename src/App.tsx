@@ -7,7 +7,7 @@ import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import FoodDelivery from "./pages/startups/FoodDelivery";
 import EducationPlatform from "./pages/startups/EducationPlatform"; 
-import CryptoPanel from "./pages/startups/CryptoPanel"; 
+import CryptoPanel from "./pages/startups/crypto/CryptoPanel";
 import UAVFactory from "./pages/startups/UAVFactory";
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
         <Route path="/startups/uav-factory" element={<UAVFactory />} />
         <Route path="/startups/food-delivery" element={<FoodDelivery />} />
         <Route path="/startups/education-platform" element={<EducationPlatform />} />
-        <Route path="/startups/crypto-panel" element={<CryptoPanel />} />
+        <Route path="/startups/crypto/crypto-panel" element={<CryptoPanel />} />
       </Routes>
     </Router>
   );

@@ -43,7 +43,7 @@ i18n
               "Проект по созданию промышленного и коммерческого производства дронов с современными технологиями автоматизации и контроля качества.",
           },
 
-          // --- Project Sections ---
+          // --- Project sections for FoodDelivery ---
           project: {
             sections: {
               about: "О проекте",
@@ -53,18 +53,37 @@ i18n
             },
             food_about_text: "MVP для местных ресторанов: оплата, заказы и доставка.",
             food_invest_text:
-              "Вы можете инвестировать в проект для расширения функционала и масштабирования.",
+              "Вы можете инвестировать в проект, для дополнительной информации свяжитесь с нами.",
+            invest_button: "Инвестировать",
             food_plan: {
-              research: "Исследование рынка и анализ конкурентов",
-              development: "Разработка MVP и тестирование",
-              partnerships: "Налаживание партнерств с ресторанами",
-              marketing: "Маркетинговая стратегия и продвижение",
-              scaling: "Масштабирование на новые регионы",
+              research: "Исследование рынка и конкурентов",
+              development: "Разработка MVP",
+              partnerships: "Поиск партнёров и поставщиков",
+              marketing: "Маркетинговая стратегия",
+              scaling: "Масштабирование и рост",
             },
             food_deadlines: {
-              mvp: "MVP готов: Q2 2025",
-              launch: "Запуск приложения: Q3 2025",
-              expansion: "Расширение сервиса: Q1 2026",
+              mvp: "MVP — через 3 месяца",
+              launch: "Запуск — через 6 месяцев",
+              expansion: "Расширение — через 12 месяцев",
+            },
+
+            // UAV sections
+            uav_about_text:
+              "Проект завода по производству промышленных и коммерческих дронов с автоматизацией и контролем качества.",
+            uav_invest_text:
+              "Вы можете инвестировать в проект завода БПЛА. Для дополнительной информации свяжитесь с нами.",
+            uav_plan: {
+              research: "Анализ рынка беспилотных технологий",
+              development: "Создание производственных линий и прототипов",
+              partnerships: "Заключение контрактов с поставщиками и партнёрами",
+              marketing: "Продвижение продукции на рынке",
+              scaling: "Расширение производства и выход на международный рынок",
+            },
+            uav_deadlines: {
+              prototype: "Прототип — через 4 месяца",
+              production: "Запуск производства — через 8 месяцев",
+              scaling: "Масштабирование — через 14 месяцев",
             },
           },
 
@@ -125,7 +144,6 @@ i18n
               "Project to build industrial and commercial drones factory with modern automation and quality control technologies.",
           },
 
-          // --- Project Sections ---
           project: {
             sections: {
               about: "About the Project",
@@ -133,20 +151,39 @@ i18n
               business_plan: "Business Plan",
               deadlines: "Deadlines",
             },
-            food_about_text: "MVP for local restaurants: payments, orders, and delivery.",
+            food_about_text:
+              "MVP for local restaurants with payments, orders, and delivery.",
             food_invest_text:
-              "You can invest in the project to expand features and scale.",
+              "You can invest in the project. For more information, contact us.",
+            invest_button: "Invest",
             food_plan: {
               research: "Market research and competitor analysis",
-              development: "MVP development and testing",
-              partnerships: "Establish partnerships with restaurants",
-              marketing: "Marketing strategy and promotion",
-              scaling: "Scaling to new regions",
+              development: "MVP development",
+              partnerships: "Finding partners and suppliers",
+              marketing: "Marketing strategy",
+              scaling: "Scaling and growth",
             },
             food_deadlines: {
-              mvp: "MVP ready: Q2 2025",
-              launch: "App launch: Q3 2025",
-              expansion: "Service expansion: Q1 2026",
+              mvp: "MVP — in 3 months",
+              launch: "Launch — in 6 months",
+              expansion: "Expansion — in 12 months",
+            },
+
+            uav_about_text:
+              "Project to build industrial and commercial drones with automation and quality control.",
+            uav_invest_text:
+              "You can invest in the UAV Factory project. For more information, contact us.",
+            uav_plan: {
+              research: "Drone technology market analysis",
+              development: "Production lines and prototype creation",
+              partnerships: "Contracts with suppliers and partners",
+              marketing: "Product promotion",
+              scaling: "Scaling production and international market entry",
+            },
+            uav_deadlines: {
+              prototype: "Prototype — in 4 months",
+              production: "Production launch — in 8 months",
+              scaling: "Scaling — in 14 months",
             },
           },
 
@@ -207,28 +244,46 @@ i18n
               "Projekt zur Errichtung einer industriellen und kommerziellen Drohnenfabrik mit moderner Automatisierung und Qualitätskontrolle.",
           },
 
-          // --- Project Sections ---
           project: {
             sections: {
               about: "Über das Projekt",
               invest: "Investitionsmöglichkeiten",
-              business_plan: "Geschäftsplan",
-              deadlines: "Fristen",
+              business_plan: "Businessplan",
+              deadlines: "Deadlines",
             },
-            food_about_text: "MVP für lokale Restaurants: Zahlungen, Bestellungen und Lieferung.",
+            food_about_text:
+              "MVP für lokale Restaurants: Zahlungen, Bestellungen, Lieferung.",
             food_invest_text:
-              "Sie können in das Projekt investieren, um Funktionen zu erweitern und zu skalieren.",
+              "Sie können in das Projekt investieren. Für weitere Informationen kontaktieren Sie uns.",
+            invest_button: "Investieren",
             food_plan: {
-              research: "Marktforschung und Wettbewerbsanalyse",
-              development: "Entwicklung und Testen des MVP",
-              partnerships: "Aufbau von Partnerschaften mit Restaurants",
-              marketing: "Marketingstrategie und Werbung",
-              scaling: "Skalierung auf neue Regionen",
+              research: "Marktforschung und Konkurrenzanalyse",
+              development: "Entwicklung des MVP",
+              partnerships: "Partner und Lieferanten finden",
+              marketing: "Marketingstrategie",
+              scaling: "Skalierung und Wachstum",
             },
             food_deadlines: {
-              mvp: "MVP fertig: Q2 2025",
-              launch: "App-Start: Q3 2025",
-              expansion: "Service-Erweiterung: Q1 2026",
+              mvp: "MVP — in 3 Monaten",
+              launch: "Start — in 6 Monaten",
+              expansion: "Expansion — in 12 Monaten",
+            },
+
+            uav_about_text:
+              "Projekt zur Herstellung industrieller und kommerzieller Drohnen mit Automatisierung und Qualitätskontrolle.",
+            uav_invest_text:
+              "Sie können in das UAV-Fabrikprojekt investieren. Für weitere Informationen kontaktieren Sie uns.",
+            uav_plan: {
+              research: "Analyse des Drohnentechnologiemarktes",
+              development: "Produktionslinien und Prototypen erstellen",
+              partnerships: "Verträge mit Lieferanten und Partnern",
+              marketing: "Produktpromotion",
+              scaling: "Produktion skalieren und internationale Märkte betreten",
+            },
+            uav_deadlines: {
+              prototype: "Prototyp — in 4 Monaten",
+              production: "Produktionsstart — in 8 Monaten",
+              scaling: "Skalierung — in 14 Monaten",
             },
           },
 
