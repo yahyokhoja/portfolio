@@ -1,27 +1,33 @@
-import React from "react";
-import Chart from "react-apexcharts";
 
-const PriceChart: React.FC = () => {
-  const options = {
-    chart: { id: "crypto-chart", toolbar: { show: false } },
-    xaxis: {
-      categories: ["09:00", "10:00", "11:00", "12:00", "13:00"]
+import ReactApexChart from "react-apexcharts";
+import type { ApexOptions } from "apexcharts";
+
+const PriceChart = () => {
+  const options: ApexOptions = {
+    chart: {
+      id: "price-chart",
+      toolbar: { show: false },
     },
-    stroke: { curve: "smooth" },
+    xaxis: {
+      categories: ["Jan", "Feb", "Mar", "Apr", "May"],
+    },
+    stroke: {
+      curve: "smooth", // обязательно одно из допустимых значений
+    },
     title: {
-      text: "BTC / USDT",
-      align: "left"
-    }
+      text: "Price Chart",
+      align: "left",
+    },
   };
 
   const series = [
     {
       name: "Price",
-      data: [62000, 62800, 62300, 63500, 64000]
-    }
+      data: [10, 41, 35, 51, 49],
+    },
   ];
 
-  return <Chart options={options} series={series} type="line" height={300} />;
+  return <ReactApexChart options={options} series={series} type="line" height={350} />;
 };
 
 export default PriceChart;
